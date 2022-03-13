@@ -26,7 +26,6 @@ fn main() {
     } else {
         println!("Sorry, you aren't on the list.");
     }
-
 }
 
 // Rust's simplest list type is an array
