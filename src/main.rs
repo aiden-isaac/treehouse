@@ -28,15 +28,3 @@ fn main() {
     }
 
 }
-
-// Rust's simplest list type is an array
-// There are two rules to the values in an array:
-//     1. The values must be of the same type
-//     2. The array cannot change in size
-// Line 12 shows the declaration of an array with string literals (&str types)
-// If you wanted to declare the array type, the syntax would be:
-//     let visitor_list : [&str;3] = ...
-// Index numbering is similar in Python, it counts from 0
-// Rust has two types of strings,
-//     str; string literals entered in source code, generally unchanging
-//     String; dynamic because you can store location, length and capacity
