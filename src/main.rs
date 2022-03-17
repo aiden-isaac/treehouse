@@ -55,7 +55,3 @@ fn main() {
     println!("The final list of visitors:");
     println!("{:#?}", visitor_list);
 }
-
-// When you want to keep adding visitors to the list, the program needs to be looped.
-// loop runs a code block over and over until it encounters a break.
-// When it breaks, it jumps to the end of the code block and runs the code outside the loop.
