@@ -44,3 +44,12 @@ fn main() {
         None => println!("You are not on the visitor list. Please leave."),
     }
 }
+
+// Closures are used a lot in Rust.
+// For now (more detailed notes in thee future) think of closures as a function you define in place.
+// Line 41's closure |visitor| visitor.name == name is the same as defining a function:
+//     fn check_visitor_name (visitor: &Visitor, name: &String) -> bool {
+//         return visitor.name == name;
+//     }
+// Closures can also capture data from the scope from which they are called.
+//     You didn’t pass ‘name‘ to the closure; however, you were still able to use it anyway.
