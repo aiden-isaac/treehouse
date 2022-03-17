@@ -1,5 +1,6 @@
 use std::io::stdin;
 
+#[derive(Debug)]
 struct Visitor {
     name: String,
     greeting: String,
@@ -27,18 +28,38 @@ fn what_is_your_name() -> String {
 }
 
 fn main() {
-    let visitor_list = [
-        Visitor::new("bert", "Hello Bert, enjoy your treehouse."),
-        Visitor::new("steve", "Hi Steve. Your milk is in the fridge."),
-        Visitor::new("fred", "Wow, who invited Fred?"),
+    let mut visitor_list = vec![
+        Visitor::new("Bert", "Hello Bert, enjoy your treehouse."),
+        Visitor::new("Steve", "Hi Steve. Your milk is in the fridge."),
+        Visitor::new("Fred", "Wow, who invited Fred?"),
     ];
 
-    println!("Hello, what's your name?");
-    let name = what_is_your_name();
+    loop {
+        println!("Hello, what's your name? (Leave empty and press ENTER to quit)");
+        let name = what_is_your_name();
 
-    let known_visitor = visitor_list.iter().find(|visitor| visitor.name == name);
-    match known_visitor {
-        Some(visitor) => visitor.greet_visitor(),
-        None => println!("You are not on the visitor list. Please leave."),
+        let known_visitor = visitor_list.iter().find(|visitor| visitor.name == name);
+        match known_visitor {
+            Some(visitor) => visitor.greet_visitor(),
+            None => {
+                if name.is_empty() {
+                    // (1)
+                    break; // (2)
+                } else {
+                    println!("{} is not on the visitor list.", name);
+                    visitor_list.push(Visitor::new(&name, "New friend"));
+                }
+            }
+        }
     }
+
+    println!("The final list of visitors:");
+    println!("{:#?}", visitor_list);
 }
+
+// For the treehouse, instead of not letting people in, you let them in and store their name.
+// Arrays can't change size but Vectors can.
+// They can be used like arrays but you can expand their size with a method called push.
+// Line 31, shows a vector is defined using vec.
+// Rust provides a helpful macro, vec!, which lets you initialize a vector with similar syntax to array initialization.
+// Line 45 (is_empty method) returns true if the String is empty, false otherwise.
