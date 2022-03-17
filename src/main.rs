@@ -56,10 +56,3 @@ fn main() {
     println!("The final list of visitors:");
     println!("{:#?}", visitor_list);
 }
-
-// When wanting to print out the contents of the Visitor structure (to see the whole friend list)
-//     the debug placeholders ({:?} —for raw printing—and {:#?}, for “pretty” printing) print any type that supports the Debug trait.
-// Adding debug support to structures is easy and makes good use of the derive macro.
-// Derive macros are a very powerful mechanism to save you from typing repetitive boilerplate code.
-// Deriving requires that every member field in the structure support the feature you are deriving.
-// Fortunately, Rust primitives such as String support it out of the box.
