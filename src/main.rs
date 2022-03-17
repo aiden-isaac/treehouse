@@ -56,10 +56,3 @@ fn main() {
     println!("The final list of visitors:");
     println!("{:#?}", visitor_list);
 }
-
-// For the treehouse, instead of not letting people in, you let them in and store their name.
-// Arrays can't change size but Vectors can.
-// They can be used like arrays but you can expand their size with a method called push.
-// Line 31, shows a vector is defined using vec.
-// Rust provides a helpful macro, vec!, which lets you initialize a vector with similar syntax to array initialization.
-// Line 45 (is_empty method) returns true if the String is empty, false otherwise.
