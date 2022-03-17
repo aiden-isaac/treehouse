@@ -44,10 +44,3 @@ fn main() {
         None => println!("You are not on the visitor list. Please leave."),
     }
 }
-
-// Iterators is a feature in Rust for manipulating data.
-// Iterators are a bit of a catch-all feature. They can do a lot.
-// When you're working with lots of data, iterators is the tool for it.
-// Iterators are designed to function chain. It massages the data into what you can work with.
-// Line 41 runs a closure called find. If the closure returns true, find returns the matching value.__rust_force_expr!
-// Iterators are very fast and are great tools.
