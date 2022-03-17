@@ -43,8 +43,7 @@ fn main() {
             Some(visitor) => visitor.greet_visitor(),
             None => {
                 if name.is_empty() {
-                    // (1)
-                    break; // (2)
+                    break;
                 } else {
                     println!("{} is not on the visitor list.", name);
                     visitor_list.push(Visitor::new(&name, "New friend"));
@@ -56,3 +55,8 @@ fn main() {
     println!("The final list of visitors:");
     println!("{:#?}", visitor_list);
 }
+
+// Vectors are a generic type. You can store almost anything in a vector.
+// When you add a String to a vector, Rust deduces that you have created a vector of strings.
+// It lists this type as Vec<String>.
+// Vector is declared as Vec<T>. The T is substituted for the type you specify or that Rust infers.
