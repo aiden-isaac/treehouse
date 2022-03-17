@@ -86,23 +86,3 @@ fn main() {
     println!("The final list of visitors:");
     println!("{:#?}", visitor_list);
 }
-
-// In this treehouse, the bouncer needs more detail on how to treat different visitors with more detail.
-// We need to store an action associated with a visitor:
-//     admit them,
-//     admit them with a note,
-//     refuse entry,
-//     or mark them as probationary members.
-// We also need to store the visitors age and forbid them from drinking if they're under 21.
-
-// Enums (short for enumerations) are like structures but with one difference.
-// Use a struct when you want one thing AND another thing.
-// Use an enum when you want one thing OR another thing.
-// In line 15, i8 is a variable type. It means 8-it signed integer, meaning it can hold values from -128 to 127.
-// You can access the members of an enumeration with the :: operator (Enumeration::Member).
-// You assign values to an enumerators the same way you assign values to structs.
-// Enumerations can be a complex type—comparing with an if statement might not make sense if you also want to consider wrapped values.
-// Instead, you need to use pattern matching.
-// Pattern matching serves two basic purposes: it checks to see if a condition is true and runs the associated code,
-//     and it can extract fields from complicated types (such as your enum’s note).
-// In line 27, it greets the visitor with different greetings based on the action given.
