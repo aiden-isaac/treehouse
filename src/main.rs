@@ -44,14 +44,3 @@ fn main() {
         None => println!("You are not on the visitor list. Please leave."),
     }
 }
-
-// Structs are similar to classes in other languages
-// It creates a whole new variable type, such as String
-// Creating a structure is easy, it's shown in Line 3-6
-// The impl in Line 8 is a function that implements methods in the structure and helps initialize it
-// A constructor (Line 10) is a function custom made to create instances of the structure easier and more customizable
-// Self in Line 9 is a shorthand way to say "Visitor"
-// self refers to the instance made in the constructor
-// Line 16 is a member function (a method). It accepts self as a parameter, which is
-//     automatically passed into the function when you reference an instance of the struct (my_visitor.greet_visitor())
-//     with the contents of that specific structure instance.
